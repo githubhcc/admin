@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="ifsc.web工厂端" />
+  <!-- <meta http-equiv="Access-Control-Allow-Origin" content="*" /> -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>ifsc.web</title>
+  <style>
+    .dc-spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      height: 240px;
+    }
+
+    .dc-load {
+      -webkit-animation: show 2s infinite;
+      -o-animation: show 2s infinite;
+      -moz-animation: show 2s infinite;
+      animation: show 2s infinite;
+    }
+
+    @-webkit-keyframes show {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes show {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes show {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .outer {
+      transform: rotate(180deg);
+      -webkit-transform-origin: 20px 19px;
+      -moz-transform-origin: 20px 19px;
+      -ms-transform-origin: 20px 19px;
+      -o-transform-origin: 20px 19px;
+      transform-origin: 20px 19px;
+      -webkit-animation: rotateMove 1.8s linear infinite;
+      -o-animation: rotateMove 1.8s linear infinite;
+      -moz-animation: rotateMove 1.8s linear infinite;
+      animation: rotateMove 1.8s linear infinite;
+    }
+
+    .inside {
+      -webkit-transform-origin: 20px 19px;
+      -moz-transform-origin: 20px 19px;
+      -ms-transform-origin: 20px 19px;
+      -o-transform-origin: 20px 19px;
+      transform-origin: 20px 19px;
+      -webkit-animation: rotateMove1 1.8s linear infinite;
+      -o-animation: rotateMove1 1.8s linear infinite;
+      -moz-animation: rotateMove1 1.8s linear infinite;
+      animation: rotateMove1 1.8s linear infinite;
+    }
+
+    @-webkit-keyframes rotateMove {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-o-keyframes rotateMove {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-moz-keyframes rotateMove {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotateMove {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes rotateMove1 {
+      from {
+        transform: rotate(180deg);
+      }
+
+      to {
+        transform: rotate(-180deg);
+      }
+    }
+
+    @-o-keyframes rotateMove1 {
+      from {
+        transform: rotate(180deg);
+      }
+
+      to {
+        transform: rotate(-180deg);
+      }
+    }
+
+    @-moz-keyframes rotateMove1 {
+      from {
+        transform: rotate(180deg);
+      }
+
+      to {
+        transform: rotate(-180deg);
+      }
+    }
+
+    @keyframes rotateMove1 {
+      from {
+        transform: rotate(180deg);
+      }
+
+      to {
+        transform: rotate(-180deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <svg class="dc-spinner" x="0px" y="0px" viewBox="0 0 38 38">
+      <text class="dc-load" x="14" y="20" font-size="2px" style="letter-spacing:0.6"
+        fill="rgba(31, 152, 236, 1)">LOADING
+        <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite">
+      </text>
+      <path
+        d="m20,34c-8.271,0 -15,-6.729 -15,-15s6.729,-15 15,-15s15,6.729 15,15s-6.729,15 -15,15zm0,-29.797c-8.159,0 -14.797,6.638 -14.797,14.797c0,8.159 6.638,14.797 14.797,14.797s14.797,-6.638 14.797,-14.797c0,-8.159 -6.638,-14.797 -14.797,-14.797z"
+        fill="rgba(239, 96, 90, 0.5)" />
+      <path
+        d="m20,32.125c-7.237,0 -13.125,-5.888 -13.125,-13.125s5.888,-13.125 13.125,-13.125s13.125,5.888 13.125,13.125s-5.888,13.125 -13.125,13.125zm0,-26.047c-7.125,0 -12.922,5.797 -12.922,12.922c0,7.125 5.797,12.922 12.922,12.922s12.922,-5.797 12.922,-12.922c0,-7.125 -5.797,-12.922 -12.922,-12.922z"
+        fill="#EF605A" />
+      <path
+        d="m5.203,19c0,-8.159 6.638,-14.797 14.797,-14.797l0,-0.203c-8.271,0 -15,6.729 -15,15s6.729,15 15,15l0,-0.203c-8.159,0 -14.797,-6.638 -14.797,-14.797z"
+        stroke-miterlimit="10" stroke-width="0.6027" stroke="#1F98EC" fill="#1F98EC"
+        class="outer"/>
+      <path
+        d="m7.078,19c0,-7.125 5.797,-12.922 12.922,-12.922l0,-0.203c-7.237,0 -13.125,5.888 -13.125,13.125s5.888,13.125 13.125,13.125l0,-0.203c-7.125,0 -12.922,-5.797 -12.922,-12.922z"
+        stroke-miterlimit="10" stroke-width="0.2027" stroke="#1F98EC" fill="#1F98EC"
+        class="inside"/>
+    </svg>
+  </div>
+</body>
+
+</html>
